@@ -1,12 +1,14 @@
 import React, {useState, useEffect, useContext} from "react";
 import Cards from "../containers/Cards";
 import Parallax from "../containers/parallax";
+import Layout from "../containers/Layout";
 import Video from "../containers/Video";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import classes from './Home.module.css'
-
+import { useDetectScroll } from "@smakss/react-scroll-direction";
 import AppThemeContext from '../store/app-theme-context'
 function Home(props) {
+    const [scrollDir] = useDetectScroll({})
     //Get scroll value
     const [offset, setOffset] = useState(0)
     useEffect(() => {
@@ -49,6 +51,7 @@ function Home(props) {
       }
 
     return (
+        <Layout scrollDir={scrollDir}>
         <div className={classes.HomePage}>
             <section id='section-header'>
                 <Parallax offset={offset}/>
@@ -61,10 +64,11 @@ function Home(props) {
                 <div className={classes.TriggerColorSkills} ref={TriggerColorSkillRef}></div>
                 <Cards isScattered = {isScattered} triggerScatter = {handleScatter}/>
             </section>
-            <section className={[classes.Cards,TriggerSkillScroll ? classes.Green : ''].join(' ')}>
-                
+            <section id='section-contact' className={classes.Contact}>
+                Under Construction
             </section>
         </div>
+        </Layout>
     );
 }
 

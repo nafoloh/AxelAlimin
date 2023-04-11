@@ -1,7 +1,7 @@
 .NavContainer {
     position: relative;
     height: 100%;
-
+width: 100%;
 }
 .NavButton {
     background-color: var(--black);
@@ -15,15 +15,15 @@
         box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(200, 200, 200) 0px 0px 0px 3px;
     }
 .NavBg {
-        height: 4rem;
-        width: 4rem;
-        border-radius: 50%;
-        position: absolute;
+        height: 100vh;
+        width: 6rem;
+        
+        position: fixed;
         background: var(--black);
         z-index: 10000;
         
-       top:.5rem;
-       left: .4rem;
+       top:0;
+       right: -6rem;
 
         transition: transform .5s cubic-bezier(0.83, 0, 0.17, 1);
 }
@@ -74,7 +74,8 @@
 
 /*CLICK TO EXPAND*/
 .NavBgExpand {
-    transform: scale(100);
+  
+    transform: scaleX(100);
 }
 .NavExpand {
     opacity: 1;

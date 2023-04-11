@@ -11,9 +11,9 @@ function App() {
   return (
     <div className={[classes.BodyExt, 'AppColorSecondary', `${colorStyle}AppColor`].join(' ')}>
       <div className={[classes.BodyInt,'AppColorPrimary', `${colorStyle}AppColor`].join(' ')} >
-        <Layout>
+        
           <Home setAppColor = {colorCtx.setColorTheme}/>
-        </Layout>
+        
       </div>
     </div>
   );

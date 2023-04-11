@@ -1,7 +1,7 @@
 import { useState } from "react"
 import AppThemeContext from "./app-theme-context"
 const AppThemeProvider = props => {
-    const [appColorState, setAppColorState] = useState('')
+    const [appColorState, setAppColorState] = useState('SkyBlue')
    // Color Pallete: Blue, Black, SkyBlue, White
    const colorHandler = (color) => {
     switch (color) {
@@ -18,7 +18,7 @@ const AppThemeProvider = props => {
           setAppColorState("Black")
           break
         default:
-          setAppColorState("")
+          setAppColorState("SkyBlue")
       }
       console.log(appColorState);
    }

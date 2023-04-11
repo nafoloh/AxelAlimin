@@ -3,13 +3,17 @@
 }
 .BodyExt {
     background: var(--sky-blue);
-    padding: 10px;
+    padding: 1rem;
+    
    
 }
 .BodyInt {
+    /*Erase width tio make center*/
+    
     background: var(--sky-blue);
     min-height: 1500px;
     border: 3.5px solid white;
+    
 }
 .Black {
     background: var(--black)

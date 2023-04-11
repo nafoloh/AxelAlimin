@@ -11,8 +11,9 @@
     height: 30vh;
     width: 30vh;
     position: relative;
-    perspective: 150rem;
-    -moz-perspective: 150rem;
+    perspective: 150;
+    -moz-perspective: 150;
+    -webkit-perspective: 150;
     z-index: 500;
 
     border-radius: 50%;
@@ -27,6 +28,16 @@
 .ButtonFront{
     /*Front Content*/
     background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+.ButtonFront span {
+    font-size: 2rem;
 }
 .ButtonBack {
      /*Back Content*/
@@ -124,5 +135,9 @@
     .Button {
         height: 30vw;
         width: 30vw;
+    }
+    .ButtonFront{
+        font-size: 2.7rem;
+        font-weight: 700;
     }
 }

@@ -10,6 +10,7 @@
     text-transform: uppercase;
     display: inline-block;
     transition: all 0.2s;
+    border-bottom: 1px solid rgba(255,255,255,.4);
 
     cursor: pointer;
 }
@@ -29,5 +30,6 @@
     .Link:visited {
     font-size: 2rem;
     text-align: center;
+    border-bottom: none;
 }
 }

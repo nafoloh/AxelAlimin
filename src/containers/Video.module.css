@@ -67,6 +67,8 @@
     z-index: 0;
     color: white;
     font-size: 15vw;
+    font-family: 'Open Sans', 'sans serif';
+    font-weight: 700;
     width: 20%;
   }
   .ScrollText {

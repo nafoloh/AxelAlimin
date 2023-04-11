@@ -1,15 +1,31 @@
 .Layout {
+    box-sizing: border-box;
     position: fixed;
     display: flex;
     justify-content: space-between;
     z-index: 123113;
     width: 100%;
+    padding-bottom: 1rem;
+   
+    align-items: center;
+   
+
+    transition: transform .4s ;
 }
 .Name {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
+    padding: 1.5rem 0;
+    margin-left: 2rem;
 }
 .Navigation {
-    margin-right: 4rem;
-    margin-top: 2rem;
+    position: fixed;
+    z-index: 123113;
+    top: 1rem;
+    right: 0;
+    margin-right: 2rem;
+   margin-top: 1rem;
+}
+.LayoutHide {
+    transform: translateY(-130%);
 }

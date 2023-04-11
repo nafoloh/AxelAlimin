@@ -49,7 +49,7 @@
     height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns:  [sidebar-start] 20rem [sidebar-end full-start] minmax(
+    grid-template-columns:  [sidebar-start] 20vw [sidebar-end full-start] minmax(
         6rem,
         1fr
     ) [center-start] repeat(
@@ -75,13 +75,64 @@
     margin-bottom: 14rem;
 }
 .Linklist {
+    margin-top: 18rem;
     padding-left: 1.5rem;
 }
 .BigLetters {
     grid-column: col-start 1/col-end 8;
     grid-row: row-start 2/row-start 7;
-    
-    
+
+}
+.FadeText {
+    transform: translateY(10rem);
+
+}
+.FadeIn{
+    animation: flipIn .4s ease forwards;
+}
+
+
+@keyframes flipIn {
+    0% {
+       transform: translateY(10rem);
+       opacity: 0;
+    }
+   
+    100% {
+       transform: translateY(0);
+       opacity: 1;
+    }
+}
+@keyframes flipOut {
+    0% {
+        transform-origin: 0% 0%;
+        transform: rotateY(0deg);
+    }
+   
+    100% {
+        transform-origin: 0% 0%;
+        transform: rotateY(90deg);
+    }
+}
+.Window {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    background: red;
+    transition: width 2s ease;
+}
+.WindowExpand {
+    width: 80vw;
+}
+.HeaderText {
+    padding-left: 2rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: white;
+    position: relative;
+    z-index: 12133;
 }
 /*.BigLetters-Row {
     transition: all .2s;
@@ -99,12 +150,17 @@
        justify-content: center;
     }
     .BigLetters {
-        grid-column: sidebar-start/sidebar-end;
+        grid-column: sidebar-start/-1;
         grid-row: row-start 2/row-start 7;
         
         
     }
     .Linklist {
+        margin-top: 8rem;
         padding: 0 2rem;
+    }
+    .HeaderText {
+        padding-left: 3rem;
+
     }
 }

@@ -32,10 +32,10 @@ function Cards(props) {
  
   return (
     <div className={classes.Cards} >
-      <div className={[classes.Button,classes.ButtonFront,ButtonSide.Front].join(' ')} onClick={props.triggerScatter}></div>
+      <div className={[classes.Button,classes.ButtonFront,ButtonSide.Front].join(' ')} onClick={props.triggerScatter}>PROJECTS<span>Press Here</span></div>
       <div className={[classes.Button,classes.ButtonBack,ButtonSide.Back].join(' ')} onClick={props.triggerScatter}></div>
       {CARDS_LIST.map((card) => (
-        <Card isScattered= {props.isScattered} key={card.id} name={card.name} id={card.id}>card</Card>
+        <Card isScattered= {props.isScattered} key={card.id} name={card.name} id={card.id}>Coming Soon!</Card>
       ))}
      
     </div>
