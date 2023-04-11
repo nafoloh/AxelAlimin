@@ -4,27 +4,26 @@
 
 }
 .NavButton {
-    background-color: var(--white);
+    background-color: var(--black);
         height: 5rem;
         width: 5rem;
         position: relative;
         z-index: 20000;
         border-radius: 50%;
-        box-shadow: 0 1rem 3rem rgba(var(--black), .1);
         text-align: center;
         cursor: pointer;
-
+        box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(200, 200, 200) 0px 0px 0px 3px;
     }
 .NavBg {
-        height: 4.5rem;
-        width: 4.5rem;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
         position: absolute;
         background: var(--black);
         z-index: 10000;
         
-       top: 0rem;
-       left: 0;
+       top:.5rem;
+       left: .4rem;
 
         transition: transform .5s cubic-bezier(0.83, 0, 0.17, 1);
 }
@@ -92,7 +91,7 @@
 .NavIcon::after {
     width: 2rem;
     height: 2px;
-    background-color: var(--sky-blue);
+    background-color: var(--white);
     display: inline-block;
     z-index: 25000;
 }
@@ -133,5 +132,11 @@
     }
     .NavBg {
         
+    }
+    .NavButton:hover .NavIcon:not(.Change)::before {
+        top: -.6rem;
+    }
+    .NavButton:hover .NavIcon:not(.Change)::after {
+        top: .6rem;
     }
 }

@@ -11,7 +11,7 @@ const entries = [
     { id: 3, name: "Contact" },
 ];
 function Parallax(props) {
-    //Get Active
+    //Get Active Link
     const [active, setActive] = useState(1);
     const handleClick = (e) => {
         setActive(+e.target.id);
@@ -50,14 +50,6 @@ function Parallax(props) {
                 <div className={classes.BigLetters}>
                     {active === 1 ? (
                       <FancyText text={{ content: 'axel alimin, &sweb developer' }} />
-                      // <React.Fragment>
-                      //   <div className={classes['BigLetters-Row']}>
-                      //     
-                      //   </div>
-                      //   <div className={classes['BigLetters-Row']}>
-                      //     <FancyText text={{ content: "web developer " }} />
-                      //   </div>
-                      // </React.Fragment>
                     ) : active === 2 ? (
                         <div>email</div>
                     ) : (

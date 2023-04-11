@@ -6,7 +6,9 @@ function Layout(props) {
     <React.Fragment>
       <div className={classes.Layout}>
         <p className={classes.Name}>Axel Alexander Alimin</p>
-        <Navigation />
+        <div className={classes.Navigation}>
+            <Navigation />
+        </div>
       </div>
       <div>{props.children}</div>
     </React.Fragment>

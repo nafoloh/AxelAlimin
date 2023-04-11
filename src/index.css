@@ -31,3 +31,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Color Palletes*/
+/*Black Theme*/
+.AppColorPrimary.BlackAppColor {
+  background: var(--black);
+  border: 3.5px solid white;
+}
+.AppColorSecondary.BlackAppColor {
+  background: var(--black);
+}
+.AppColorPrimary.BlackAppColor.Opposite {
+  background: var(--white);
+}
+.AppColorSecondary.BlackAppColor.Opposite {
+  background: var(--white);
+}
+
+/*White Theme*/
+.AppColorSecondary.WhiteAppColor {
+  background: white;
+}
+.AppColorPrimary.WhiteAppColor {
+  border: 3.5px solid black;
+  background: white;
+}
+.AppColorPrimary.WhiteAppColor.Opposite {
+  background: var(--black);
+  border: none;
+}
+.AppColorSecondary.WhiteAppColor.Opposite {
+  background: var(--white);
+}
+
+/*SkyBlue*/
+.AppColorPrimary.SkyBlueAppColor {
+  background: var(--sky-blue);
+  border: 3.5px solid white;
+}
+.AppColorSecondary.SkyBlueAppColor {
+  background: var(--sky-blue);
+}
+.AppColorPrimary.SkyBlueAppColor.Opposite {
+  background: var(--white);
+ border: none;
+}
+.AppColorSecondary.SkyBlueAppColor.Opposite {
+  background: var(--sky-blue);
+}

@@ -1,4 +1,15 @@
 .Layout {
-    position: relative;
+    position: fixed;
     display: flex;
+    justify-content: space-between;
+    z-index: 123113;
+    width: 100%;
+}
+.Name {
+    font-size: 2rem;
+    color: white;
+}
+.Navigation {
+    margin-right: 4rem;
+    margin-top: 2rem;
 }
