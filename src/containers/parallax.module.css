@@ -90,3 +90,21 @@
     opacity: .2;
 }
 */
+@media (max-width: 600px) {
+    .Sidebar {
+        grid-row: row-start 1/2;
+        grid-column: sidebar-start/full-end;
+        background-color: transparent;
+
+       justify-content: center;
+    }
+    .BigLetters {
+        grid-column: sidebar-start/sidebar-end;
+        grid-row: row-start 2/row-start 7;
+        
+        
+    }
+    .Linklist {
+        padding: 0 2rem;
+    }
+}

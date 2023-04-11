@@ -12,7 +12,7 @@
     font-size: 7rem;
     color: var(--white);
 
-    transition: all .2s;
+    transition: opacity .2s;
     
 }
 /* Flex the words in the container*/
@@ -22,8 +22,13 @@
    display: flex;
    justify-content: left;
 }
+/*
 .FancyCharacter:hover {
-    animation: wiggle .7s cubic-bezier(.27,.48,.28,1) infinite;
+   
+}
+*/
+.PlayAnimation {
+    animation: wiggle .7s cubic-bezier(.27,.48,.28,1);
 }
 /* Flex the characters in the word*/
 .FancyWord{
@@ -58,5 +63,14 @@
     }
     100% {
         
+    }
+}
+
+@media (max-width : 600px) {
+    .FancyCharacter {
+        font-size: 4rem;
+    }
+    .Fancy {
+        justify-content: center;
     }
 }

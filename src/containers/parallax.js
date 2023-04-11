@@ -38,7 +38,7 @@ function Parallax(props) {
             <img src={bg} alt="bg" className="bg" style={BgStyle} />
             <div className={classes.Content}>
                 <div className={classes.Sidebar}>
-                    <p >Axel Alexander Alimin</p>
+                    
                     <div className={classes.Linklist}>
                         <LinkList
                             List={entries}

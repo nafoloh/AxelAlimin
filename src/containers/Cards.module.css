@@ -13,7 +13,7 @@
     position: relative;
     perspective: 150rem;
     -moz-perspective: 150rem;
-    z-index: 10000;
+    z-index: 500;
 
     border-radius: 50%;
     position: absolute;
@@ -25,7 +25,7 @@
 }
 .ButtonFront{
     /*Front Content*/
-    background-color: rgb(9, 255, 0);
+    background-color: var(--white);
 }
 .ButtonBack {
      /*Back Content*/
@@ -105,5 +105,11 @@
     }
     100%{
         transform: scale(1) rotateY(-180deg);
+    }
+}
+@media (max-width: 600px) {
+    .Button {
+        height: 30vw;
+        width: 30vw;
     }
 }

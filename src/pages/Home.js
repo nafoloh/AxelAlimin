@@ -34,13 +34,13 @@ function Home(props) {
     //console.log(offset)
     return (
         <div className={classes.HomePage}>
-            <section>
+            <section id='section-header'>
                 <Parallax offset={offset}/>
             </section>
             <section className={TriggerSkillScroll ? classes.Video : classes.VideoBackwards}>
                <Video />
             </section>
-            <section className={[classes.Skills, TriggerSkillScroll ? classes.Green : ''].join(' ')}>
+            <section id='section-projects'className={[classes.Skills, TriggerSkillScroll ? classes.Green : ''].join(' ')}>
                 <div className={classes.TriggerSkills} ref={TriggerSkillRef}></div>
                 <div className={classes.TriggerColorSkills} ref={TriggerColorSkillRef}></div>
                 <Cards />

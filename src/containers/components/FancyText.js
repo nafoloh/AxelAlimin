@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
+import FancyChar from './FancyChar'
 import classes from './FancyText.module.css'
 function FancyText(props) {
+
  const sentences = props.text.content.split('&s')
   const wordSplit = sentences.map(sentence => {
     return sentence.split(' ').map(word => {
@@ -11,7 +13,7 @@ function FancyText(props) {
   const text = wordSplit.map((sentence) => {
     return <div className={classes.FancySentence}>{sentence.map((word)=>{
         return <p className={classes.FancyWord}>{word.map((char) => {
-            return <span className={classes.FancyCharacter} >{char}</span>
+            return <FancyChar >{char}</FancyChar>
     })}</p>})}</div>
   })
   //console.log(text);

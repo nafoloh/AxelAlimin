@@ -1,5 +1,7 @@
 import { useState} from 'react'
 import classes from './App.module.css'
+import Navigation from './containers/components/Navigation';
+import Layout from './containers/Layout';
 import Home from './pages/Home';
 
 function App() {
@@ -28,7 +30,9 @@ function App() {
   return (
     <div className={[classes.BodyExt, classes[`${appColorState}`]].join(' ')}>
       <div className={[classes.BodyInt, classes[`${appColorState}`]].join(' ')} >
-        <Home setAppColor = {colorHandler}/>
+        <Layout>
+          <Home setAppColor = {colorHandler}/>
+        </Layout>
       </div>
     </div>
   );

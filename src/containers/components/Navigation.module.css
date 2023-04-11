@@ -1,0 +1,137 @@
+.NavContainer {
+    position: relative;
+    height: 100%;
+
+}
+.NavButton {
+    background-color: var(--white);
+        height: 5rem;
+        width: 5rem;
+        position: relative;
+        z-index: 20000;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba(var(--black), .1);
+        text-align: center;
+        cursor: pointer;
+
+    }
+.NavBg {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        position: absolute;
+        background: var(--black);
+        z-index: 10000;
+        
+       top: 0rem;
+       left: 0;
+
+        transition: transform .5s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.Nav{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+   transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+   opacity: 0;
+    width: 0;
+}
+.NavList{
+    list-style: none;
+    text-align: center;
+}
+.NavItem{
+    margin: 1rem;
+}
+.NavLink,
+.NavLink:link,
+.NavLink:visited {
+    display: block;
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: var(--white);
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--white) 50% );
+        background-size: 220%; 
+        transition: all .4s ;
+}
+.NavLink:hover,
+.NavLink:active {
+    background-position: 100%;
+        color: var(--black);
+        transform: translateX(1rem);
+}
+
+/*CLICK TO EXPAND*/
+.NavBgExpand {
+    transform: scale(100);
+}
+.NavExpand {
+    opacity: 1;
+    width: 100%;
+}
+
+/*Icon transform*/
+.NavIcon {
+    margin-top: 2.5rem;
+    position: relative;
+}
+.NavIcon,
+.NavIcon::before,
+.NavIcon::after {
+    width: 2rem;
+    height: 2px;
+    background-color: var(--sky-blue);
+    display: inline-block;
+    z-index: 25000;
+}
+.NavIcon::before,
+.NavIcon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+}
+.NavIcon::before {
+    top: -.6rem;
+}
+.NavIcon::after {
+   top: .6rem;
+}
+.NavButton:hover .NavIcon:not(.Change)::before {
+    top: -.8rem;
+}
+.NavButton:hover .NavIcon:not(.Change)::after {
+    top: .8rem;
+}
+/*CLICK TO CHANGE ICON SHAPE*/
+.NavIcon.Change {
+    background-color: transparent;
+}
+.NavIcon.Change::before{
+    top: 0;
+    transform: rotate(135deg);
+}
+.NavIcon.Change::after{
+    top: 0;
+    transform: rotate(-135deg);
+}
+@media (max-width : 600px) {
+    .NavButton {
+       
+    }
+    .NavBg {
+        
+    }
+}

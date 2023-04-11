@@ -78,3 +78,9 @@
 .active5 {
     transform: translate(26vw, 16vh) rotateZ(135deg);
 }
+@media (max-width: 600px) {
+    .Card {
+        width: 18vw;
+        height: 24vw;
+    }
+}
