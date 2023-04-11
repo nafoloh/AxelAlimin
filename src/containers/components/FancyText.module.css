@@ -1,0 +1,62 @@
+.FancySentence {
+    display: flex;
+}
+.FancyCharacter {
+    position: relative;
+    z-index: 70;
+    
+    display: inline-block;
+    height: 100%;
+    
+    font-family: 'Open Sans', 'sans serif';
+    font-size: 7rem;
+    color: var(--white);
+
+    transition: all .2s;
+    
+}
+/* Flex the words in the container*/
+.Fancy {
+    width: 85%;
+    flex-wrap: wrap;
+   display: flex;
+   justify-content: left;
+}
+.FancyCharacter:hover {
+    animation: wiggle .7s cubic-bezier(.27,.48,.28,1) infinite;
+}
+/* Flex the characters in the word*/
+.FancyWord{
+    
+    display: flex;
+    padding: 1.5rem;
+}
+.FancyCharacter:first-child {
+    text-transform:uppercase;
+
+}
+/*Other Fancy group is controlled in the parralax module css*/
+.Fancy:hover .FancyWord:not(:hover) > *{
+    opacity: .7;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: skewX(0deg);
+    }
+    20% {
+        transform: skewX(10deg);
+    }
+    40% {
+        transform: skewX(-10deg);
+    }
+    60% {
+        transform: skewX(5deg);
+    }
+    80% {
+        transform: skewX(0deg);
+    }
+    100% {
+        
+    }
+}

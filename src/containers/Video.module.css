@@ -1,0 +1,77 @@
+.Header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+.Header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,.4)), url(../img/bg.jpg);
+    
+    z-index: 0;
+}
+.Header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, var(--sky-blue), transparent);
+    z-index: 10000;
+
+   
+}
+.Snow {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    object-fit: cover;
+}
+.Video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    
+}
+
+.Reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .Reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .Text {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index: 0;
+    color: white;
+    font-size: 15vw;
+    width: 20%;
+  }
+  .ScrollText {
+    color: white;
+    position: relative;
+    transform: translateY(-5rem) ;
+    z-index: 10;
+}

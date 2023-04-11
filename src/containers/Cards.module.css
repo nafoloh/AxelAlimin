@@ -1,0 +1,109 @@
+.Cards {
+    height: 500px;
+    width: 500px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Button {
+    height: 30vh;
+    width: 30vh;
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    z-index: 10000;
+
+    border-radius: 50%;
+    position: absolute;
+    backface-visibility: hidden;
+    cursor: pointer;
+}
+.ButtonSide {
+        
+}
+.ButtonFront{
+    /*Front Content*/
+    background-color: rgb(9, 255, 0);
+}
+.ButtonBack {
+     /*Back Content*/
+    background-color: red;
+}
+.FrontDeactivate {
+    animation: frontDeactivate 1s  ease-in-out forwards;
+}
+.BackActivate {
+    animation: backActivate 1s  ease-in-out forwards;
+}
+.BackDeactivate {
+    animation: backDeactivate 1s   ease-in-out forwards;
+}
+.FrontActivate {
+    animation: frontActivate 1s  ease-in-out  forwards;
+}
+/*Front rotate first then scale*/
+@keyframes frontDeactivate {
+    0% {
+        transform: rotateY(0) scale(1);
+    }
+    50% {
+        transform: rotateY(-180deg) scale(1);
+    }
+    75% {
+        transform: rotateY(-180deg) scale(1);
+    }
+    100%{
+        transform: rotateY(-180deg) scale(.7);
+    }
+}
+/*Back rotate same direction then scale*/
+@keyframes backActivate {
+    0% {
+        transform: scale(1) rotateY(-180deg);
+        
+    }
+    50% {
+        transform: scale(1) rotateY(-360deg);
+        
+    }
+    75% {
+        transform: scale(1) rotateY(-360deg);
+    }
+    100%{
+        
+        transform: scale(.7) rotateY(-360deg);
+    }
+}
+@keyframes frontActivate {
+    0% {
+        transform: scale(.7) rotateY(-180deg);
+    }
+    50% {
+        transform: scale(.7) rotateY(0);
+    }
+    75% {
+        transform: scale(.7) rotateY(0);
+    }
+    100%{
+        transform: scale(1) rotateY(0);
+    }
+    
+}
+@keyframes backDeactivate {
+    0% {
+        transform: scale(.7) rotateY(-360deg);
+        
+    }
+    50% {
+        transform: scale(.7) rotateY(-180deg);
+        
+    }
+    75% {
+        transform: scale(.7) rotateY(-180deg);
+    }
+    100%{
+        transform: scale(1) rotateY(-180deg);
+    }
+}

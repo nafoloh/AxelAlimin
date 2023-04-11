@@ -1,0 +1,29 @@
+.BodyExt,.BodyInt {
+    transition: all .2s;
+}
+.BodyExt {
+    background: var(--sky-blue);
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.BodyInt {
+    background: var(--sky-blue);
+    min-height: 1500px;
+    border: 3.5px solid white;
+}
+.Black {
+    background: var(--black)
+}
+.Blue {
+    background: blue;
+}
+.SkyBlue {
+    background: var(--sky-blue);
+}
+/*White Theme*/
+.White {
+    background: white;
+}
+.BodyInt.White {
+    border: 3.5px solid black;
+}

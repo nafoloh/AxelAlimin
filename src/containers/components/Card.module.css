@@ -1,0 +1,80 @@
+.Card {
+    background-color: orangered;
+    position: absolute;
+    
+    width: 15vh;
+    height: 20vh;
+    margin: 5rem auto;
+    border-radius: 1rem;
+    
+    transition: transform 1s ease;
+    
+}
+/*CARD 1*/
+.Card1 {
+    background-color: orange;
+}
+.Card1.active1:hover {
+    transform:  translate(-26vw, 16vh) rotateZ(1turn);
+}
+
+.active1 {
+    transform: translate(-26vw, 16vh) rotateZ(225deg);
+}
+/*CARD 2*/
+.Card2 {
+    background-color: blue;
+}
+.Card2.active2:hover {
+    transform:  translate(-26vw, -18vh) rotateZ(1turn);
+}
+
+.active2 {
+    transform: translate(-26vw, -18vh) rotateZ(315deg);
+}
+.Card1::after {
+    content: '';
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    z-index:100;
+    background: transparent;
+}
+/*CARD 3*/
+.Card3{
+    background-color: red;
+    transform:  translate(0, 0vh) rotateZ(120deg);
+}
+.Card3.active3:hover {
+    transform:  translate(0vw, -35vh) rotateZ(360deg);
+}
+
+.active3 {
+    transform: translate(0vw, -35vh) rotateZ(360deg);
+}
+/*CARD 4*/
+.Card4 {
+    background-color: greenyellow;
+    transform:  translate(0, 0) rotateZ(180deg);
+}
+.Card4.active4:hover {
+    transform:  translate(26vw, -18vh) rotateZ(360deg);
+}
+
+.active4 {
+    transform: translate(26vw, -18vh) rotateZ(405deg);
+}
+/*CARD 5*/
+.Card5 {
+    background-color: aquamarine;
+    transform:  translate(0, 0) rotateZ(352deg);
+}
+.Card5.active5:hover {
+    transform:  translate(26vw, 16vh) rotateZ(0deg);
+}
+
+.active5 {
+    transform: translate(26vw, 16vh) rotateZ(135deg);
+}
