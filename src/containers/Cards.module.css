@@ -135,6 +135,9 @@
     .Button {
         height: 30vw;
         width: 30vw;
+        perspective: none;
+        -moz-perspective: none;
+        -webkit-perspective: none;
     }
     .ButtonFront{
         font-size: 2.7rem;

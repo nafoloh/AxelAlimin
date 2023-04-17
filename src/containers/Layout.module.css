@@ -21,8 +21,8 @@
 .Navigation {
     position: fixed;
     z-index: 123113;
-    top: 1rem;
-    right: 0;
+    top: 2rem;
+    right: 1rem;
     margin-right: 2rem;
    margin-top: 1rem;
 }
