@@ -8,15 +8,20 @@
 .VideoBackwards {
     margin: 0 auto;
     overflow: hidden;
-    transition: .5s;
-    animation:grow .5s ease forwards;
+    transition: all .5s ease;
+    border-radius: 0;
+        width: 100%;
+        height: 100vh;
 }
 .Video {
     
     margin: 5rem auto;
-    transition: .5s;
+    transition: all .5s ease;
     overflow: hidden;
-    animation: shrink .5s ease forwards;
+   
+    border-radius: 50px;
+        width: 90%;
+        height: 80vh;
   
 }
 @keyframes shrink {
